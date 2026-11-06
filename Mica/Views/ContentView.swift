@@ -5,9 +5,11 @@ import UniformTypeIdentifiers
 struct ContentView: View {
     @Environment(\.colorScheme) private var scheme
     @StateObject private var engine = CanvasEngine()
+    @AppStorage("pngExportPresets") private var exportPresetsData = Data()
     @State private var file: SVGFile?
     @State private var inspectorVisible = false
     @State private var importing = false
+    @State private var exportFile: SVGFile?
     @State private var dropTargeted = false
     @State private var canvasHovered = false
 
@@ -30,6 +32,9 @@ struct ContentView: View {
             case .success(let url): open(url)
             case .failure(let error): engine.errorMessage = error.localizedDescription
             }
+        }
+        .sheet(item: $exportFile) { file in
+            PNGExportView(file: file, engine: engine)
         }
         .onOpenURL(perform: open)
         .onDrop(of: [UTType.fileURL.identifier], isTargeted: $dropTargeted, perform: handleDrop)
@@ -127,9 +132,7 @@ struct ContentView: View {
             toolbarButton("arrow.up.left.and.arrow.down.right", hint: "Fit to window") { engine.fit() }
             if let file {
                 toolbarDivider
-                toolbarButton("square.and.arrow.up", hint: "Export PNG") {
-                    engine.exportPNG(file: file)
-                }
+                exportMenu(for: file)
                 toolbarButton("sidebar.right", hint: "Toggle details") {
                     inspectorVisible.toggle()
                 }
@@ -141,6 +144,42 @@ struct ContentView: View {
         .background(MicaPalette.surface(scheme), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 8, style: .continuous).strokeBorder(MicaPalette.line(scheme)))
         .shadow(color: .black.opacity(0.08), radius: 6, y: 2)
+    }
+
+    private var exportPresets: [PNGExportPreset] {
+        (try? JSONDecoder().decode([PNGExportPreset].self, from: exportPresetsData))
+            ?? PNGExportPreset.defaults
+    }
+
+    private func exportMenu(for file: SVGFile) -> some View {
+        Menu {
+            ForEach(exportPresets) { preset in
+                let size = preset.dimension.size(value: preset.value, for: file)
+                Button {
+                    if let size {
+                        engine.exportPNG(file: file, size: size)
+                    }
+                } label: {
+                    if let size {
+                        Text("\(preset.title) — \(size.width) × \(size.height) px")
+                    } else {
+                        Text("\(preset.title) — exceeds \(PNGExportSize.maximumDimension) px")
+                    }
+                }
+                .disabled(size == nil)
+            }
+            Divider()
+            Button("Custom…") { exportFile = file }
+        } label: {
+            Image(systemName: "square.and.arrow.up")
+                .font(.system(size: 13, weight: .medium))
+                .frame(width: 30, height: 30)
+                .contentShape(Rectangle())
+        }
+        .menuStyle(.borderlessButton)
+        .menuIndicator(.hidden)
+        .frame(width: 30, height: 30)
+        .help("Export PNG")
     }
 
     private var toolbarDivider: some View {

@@ -12,6 +12,9 @@
 		C00000000000000000000014 /* CanvasBackdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000004 /* CanvasBackdrop.swift */; };
 		C00000000000000000000015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000005 /* ContentView.swift */; };
 		C00000000000000000000016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000006 /* Assets.xcassets */; };
+		C00000000000000000000017 /* PNGExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000008 /* PNGExportView.swift */; };
+		C00000000000000000000018 /* PNGExportPresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000009 /* PNGExportPresetsView.swift */; };
+		C00000000000000000000019 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0000000000000000000000A /* PreferencesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		C00000000000000000000005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C00000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C00000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00000000000000000000008 /* PNGExportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExportView.swift; sourceTree = "<group>"; };
+		C00000000000000000000009 /* PNGExportPresetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PNGExportPresetsView.swift; sourceTree = "<group>"; };
+		C0000000000000000000000A /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		C00000000000000000000010 /* Mica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -33,7 +39,7 @@
 		C00000000000000000000030 = {isa = PBXGroup; children = (C00000000000000000000031 /* App */, C00000000000000000000032 /* Models */, C00000000000000000000033 /* Views */, C00000000000000000000034 /* Resources */, C00000000000000000000035 /* Products */); path = Mica; sourceTree = "<group>"; };
 		C00000000000000000000031 /* App */ = {isa = PBXGroup; children = (C00000000000000000000001 /* MicaApp.swift */); path = App; sourceTree = "<group>"; };
 		C00000000000000000000032 /* Models */ = {isa = PBXGroup; children = (C00000000000000000000002 /* SVGFile.swift */); path = Models; sourceTree = "<group>"; };
-		C00000000000000000000033 /* Views */ = {isa = PBXGroup; children = (C00000000000000000000005 /* ContentView.swift */, C00000000000000000000004 /* CanvasBackdrop.swift */, C00000000000000000000003 /* WebSVGCanvas.swift */); path = Views; sourceTree = "<group>"; };
+		C00000000000000000000033 /* Views */ = {isa = PBXGroup; children = (C00000000000000000000005 /* ContentView.swift */, C00000000000000000000004 /* CanvasBackdrop.swift */, C00000000000000000000003 /* WebSVGCanvas.swift */, C00000000000000000000008 /* PNGExportView.swift */, C00000000000000000000009 /* PNGExportPresetsView.swift */, C0000000000000000000000A /* PreferencesView.swift */); path = Views; sourceTree = "<group>"; };
 		C00000000000000000000034 /* Resources */ = {isa = PBXGroup; children = (C00000000000000000000006 /* Assets.xcassets */, C00000000000000000000007 /* Info.plist */); path = Resources; sourceTree = "<group>"; };
 		C00000000000000000000035 /* Products */ = {isa = PBXGroup; children = (C00000000000000000000010 /* Mica.app */); name = Products; sourceTree = "<group>"; };
 /* End PBXGroup section */
@@ -51,7 +57,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C00000000000000000000020 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (C00000000000000000000011 /* MicaApp.swift in Sources */, C00000000000000000000012 /* SVGFile.swift in Sources */, C00000000000000000000013 /* WebSVGCanvas.swift in Sources */, C00000000000000000000014 /* CanvasBackdrop.swift in Sources */, C00000000000000000000015 /* ContentView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+		C00000000000000000000020 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (C00000000000000000000011 /* MicaApp.swift in Sources */, C00000000000000000000012 /* SVGFile.swift in Sources */, C00000000000000000000013 /* WebSVGCanvas.swift in Sources */, C00000000000000000000014 /* CanvasBackdrop.swift in Sources */, C00000000000000000000015 /* ContentView.swift in Sources */, C00000000000000000000017 /* PNGExportView.swift in Sources */, C00000000000000000000018 /* PNGExportPresetsView.swift in Sources */, C00000000000000000000019 /* PreferencesView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */

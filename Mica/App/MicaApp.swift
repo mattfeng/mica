@@ -1,7 +1,14 @@
+import AppKit
 import SwiftUI
 
 @main
 struct MicaApp: App {
+    init() {
+        let storedAppearance = UserDefaults.standard.string(forKey: "appearance")
+        let appearance = storedAppearance.flatMap(AppAppearance.init(rawValue:)) ?? .system
+        NSApplication.shared.appearance = appearance.nativeAppearance
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -10,6 +17,12 @@ struct MicaApp: App {
         .windowStyle(.hiddenTitleBar)
         .defaultSize(width: 1180, height: 790)
         .commands {
+            CommandGroup(replacing: .appSettings) {
+                SettingsLink {
+                    Text("Preferences…")
+                }
+                .keyboardShortcut(",", modifiers: .command)
+            }
             CommandGroup(replacing: .newItem) {
                 Button("Open SVG…") { NotificationCenter.default.post(name: .micaOpen, object: nil) }
                     .keyboardShortcut("o", modifiers: .command)
@@ -26,6 +39,11 @@ struct MicaApp: App {
                     .keyboardShortcut("-", modifiers: .command)
             }
         }
+
+        Settings {
+            PreferencesView()
+        }
+        .windowResizability(.contentSize)
     }
 }
 

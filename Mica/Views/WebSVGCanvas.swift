@@ -36,14 +36,14 @@ final class CanvasEngine: NSObject, ObservableObject, WKScriptMessageHandler {
     func zoomIn() { run("window.viewer && window.viewer.zoomBy(1.25)") }
     func zoomOut() { run("window.viewer && window.viewer.zoomBy(0.8)") }
 
-    func exportPNG(file: SVGFile) {
+    func exportPNG(file: SVGFile, size: PNGExportSize) {
         let panel = NSSavePanel()
         panel.allowedContentTypes = [.png]
         panel.nameFieldStringValue = file.stem + ".png"
         panel.canCreateDirectories = true
         guard panel.runModal() == .OK, let url = panel.url else { return }
         exportDestination = url
-        run("window.viewer && window.viewer.exportPNG(2)")
+        run("window.viewer && window.viewer.exportPNG(\(size.width), \(size.height))")
     }
 
     private func run(_ javascript: String) {
@@ -124,10 +124,7 @@ final class CanvasEngine: NSObject, ObservableObject, WKScriptMessageHandler {
             state.y = py - innerHeight/2 - (py - innerHeight/2 - state.y) * ratio;
             state.scale = after; apply();
           }
-          function exportPNG(multiplier) {
-            const scale = Math.min(multiplier, 4096 / Math.max(iw, ih));
-            const w = Math.max(1, Math.round(iw * scale));
-            const h = Math.max(1, Math.round(ih * scale));
+          function exportPNG(w, h) {
             const image = new Image();
             image.onload = () => {
               try {

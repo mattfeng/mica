@@ -21,7 +21,7 @@ This archive contains the **source project**, not a prebuilt or notarized `.app`
 | Zoom | `⌘=` / `⌘-`, toolbar buttons, or trackpad scroll |
 | Pan | Click and drag |
 | Change backdrop | Background menu in the bottom toolbar |
-| Export PNG | Export icon in the upper-right toolbar; exports at 2× (capped at 4096 px) |
+| Export PNG | Export icon; choose a preset to save directly, or Custom… to specify a scale factor, width, or height. Aspect ratio is preserved; each dimension is limited to 4096 px. |
 | Show metadata | Sidebar icon in the upper-right toolbar |
 
 ## Features
