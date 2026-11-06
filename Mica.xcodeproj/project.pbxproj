@@ -1,0 +1,70 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C00000000000000000000011 /* MicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000001 /* MicaApp.swift */; };
+		C00000000000000000000012 /* SVGFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000002 /* SVGFile.swift */; };
+		C00000000000000000000013 /* WebSVGCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000003 /* WebSVGCanvas.swift */; };
+		C00000000000000000000014 /* CanvasBackdrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000004 /* CanvasBackdrop.swift */; };
+		C00000000000000000000015 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000005 /* ContentView.swift */; };
+		C00000000000000000000016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C00000000000000000000006 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C00000000000000000000001 /* MicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicaApp.swift; sourceTree = "<group>"; };
+		C00000000000000000000002 /* SVGFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGFile.swift; sourceTree = "<group>"; };
+		C00000000000000000000003 /* WebSVGCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSVGCanvas.swift; sourceTree = "<group>"; };
+		C00000000000000000000004 /* CanvasBackdrop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasBackdrop.swift; sourceTree = "<group>"; };
+		C00000000000000000000005 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C00000000000000000000006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C00000000000000000000007 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C00000000000000000000010 /* Mica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mica.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C00000000000000000000021 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C00000000000000000000030 = {isa = PBXGroup; children = (C00000000000000000000031 /* App */, C00000000000000000000032 /* Models */, C00000000000000000000033 /* Views */, C00000000000000000000034 /* Resources */, C00000000000000000000035 /* Products */); path = Mica; sourceTree = "<group>"; };
+		C00000000000000000000031 /* App */ = {isa = PBXGroup; children = (C00000000000000000000001 /* MicaApp.swift */); path = App; sourceTree = "<group>"; };
+		C00000000000000000000032 /* Models */ = {isa = PBXGroup; children = (C00000000000000000000002 /* SVGFile.swift */); path = Models; sourceTree = "<group>"; };
+		C00000000000000000000033 /* Views */ = {isa = PBXGroup; children = (C00000000000000000000005 /* ContentView.swift */, C00000000000000000000004 /* CanvasBackdrop.swift */, C00000000000000000000003 /* WebSVGCanvas.swift */); path = Views; sourceTree = "<group>"; };
+		C00000000000000000000034 /* Resources */ = {isa = PBXGroup; children = (C00000000000000000000006 /* Assets.xcassets */, C00000000000000000000007 /* Info.plist */); path = Resources; sourceTree = "<group>"; };
+		C00000000000000000000035 /* Products */ = {isa = PBXGroup; children = (C00000000000000000000010 /* Mica.app */); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C00000000000000000000040 /* Mica */ = {isa = PBXNativeTarget; buildConfigurationList = C00000000000000000000052 /* Build configuration list for PBXNativeTarget "Mica" */; buildPhases = (C00000000000000000000020 /* Sources */, C00000000000000000000021 /* Frameworks */, C00000000000000000000022 /* Resources */); buildRules = (); dependencies = (); name = Mica; productName = Mica; productReference = C00000000000000000000010 /* Mica.app */; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C00000000000000000000041 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600; TargetAttributes = {C00000000000000000000040 = {CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = C00000000000000000000051 /* Build configuration list for PBXProject "Mica" */; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base); mainGroup = C00000000000000000000030; productRefGroup = C00000000000000000000035; projectDirPath = ""; projectRoot = ""; targets = (C00000000000000000000040 /* Mica */); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C00000000000000000000022 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (C00000000000000000000016 /* Assets.xcassets in Resources */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C00000000000000000000020 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (C00000000000000000000011 /* MicaApp.swift in Sources */, C00000000000000000000012 /* SVGFile.swift in Sources */, C00000000000000000000013 /* WebSVGCanvas.swift in Sources */, C00000000000000000000014 /* CanvasBackdrop.swift in Sources */, C00000000000000000000015 /* ContentView.swift in Sources */); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C00000000000000000000060 /* Debug Project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_OPTIMIZATION_LEVEL = 0; MACOSX_DEPLOYMENT_TARGET = 14.0; ONLY_ACTIVE_ARCH = YES; SDKROOT = macosx; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		C00000000000000000000061 /* Release Project */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu17; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+		C00000000000000000000062 /* Debug Target */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = MicaIcon; CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Mica/Resources/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks"); MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = dev.mica.svgviewer; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = minimal; SWIFT_VERSION = 5.0; }; name = Debug; };
+		C00000000000000000000063 /* Release Target */ = {isa = XCBuildConfiguration; buildSettings = {ASSETCATALOG_COMPILER_APPICON_NAME = MicaIcon; CODE_SIGNING_ALLOWED = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = Mica/Resources/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks"); MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = dev.mica.svgviewer; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_STRICT_CONCURRENCY = minimal; SWIFT_VERSION = 5.0; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C00000000000000000000051 /* Build configuration list for PBXProject "Mica" */ = {isa = XCConfigurationList; buildConfigurations = (C00000000000000000000060 /* Debug Project */, C00000000000000000000061 /* Release Project */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		C00000000000000000000052 /* Build configuration list for PBXNativeTarget "Mica" */ = {isa = XCConfigurationList; buildConfigurations = (C00000000000000000000062 /* Debug Target */, C00000000000000000000063 /* Release Target */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = C00000000000000000000041 /* Project object */;
+}
