@@ -17,8 +17,10 @@ debug:
     xcodebuild -project "{{project}}" -scheme "{{scheme}}" -configuration Debug -derivedDataPath "{{derived_data}}" CODE_SIGNING_ALLOWED=NO build
     @echo "Built: {{derived_data}}/Build/Products/Debug/Mica.app"
 
-# Build Release and launch it.
+# Build Release, refresh macOS app registration, and launch it.
 run: build
+    touch "{{derived_data}}/Build/Products/Release/Mica.app"
+    /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -f "{{derived_data}}/Build/Products/Release/Mica.app"
     open "{{derived_data}}/Build/Products/Release/Mica.app"
 
 # Remove all local build artifacts.
